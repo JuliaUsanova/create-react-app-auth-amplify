@@ -36,9 +36,7 @@ export default class List extends Component {
                         </li>
                     </ul>
                     <Switch>
-                        <Route path="/documents/:id">
-                            <Preview />
-                        </Route>
+                        <Route path="/documents/:id" children={<Preview />} />
                     </Switch>
                 </div>
             </Router>
