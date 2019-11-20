@@ -10,23 +10,26 @@ import {
     Switch,
     Route,
     Link,
+    useRouteMatch,
     useParams
 } from "react-router-dom";
-// import Preview from "./Preview";
+import Preview from "./Preview";
 Amplify.configure(aws_exports);
 
-
-function Preview(props) {
-    let { id } = useParams();
-
-    return (
-        <div className="">
-            This is simple text {id}
-        </div>
-    );
-}
+//
+// function Preview(props) {
+//     debugger
+//     let { id } = useParams();
+//
+//     return (
+//         <div className="">
+//             This is simple text {id}
+//         </div>
+//     );
+// }
 
 export default function List() {
+        let { path, url } = useRouteMatch();
         let array = [
             {name: 'alaal', id: 1},
             {name: 'sdfgtg', id: 2},
@@ -39,13 +42,11 @@ export default function List() {
                 <div className="List">
                     <ul className="List-body">
                         <li className="List-item">
-                            <Link to="/documents/1"><ListItem name="dlkjsla" id="1" /></Link>
+                            <Link to={`${url}/${1}`}><ListItem name="dlkjsla" id="1" /></Link>
                             {/*{array.map(c => <Link to={`/documents/${c.id}`}><ListItem name={c.id} id={c.name} /></Link>)}*/}
                         </li>
                     </ul>
-                    <Switch>
-                        <Route path="/documents/:id" children={<Preview />} />
-                    </Switch>
+                    <Route path={`${path}/:id`}><Preview /></Route>
                 </div>
 
         );
