@@ -11,7 +11,7 @@ export default class ListItem extends Component {
         return (
             <div className="List-item">
                 <span>This is text: {props.name}</span><br>
-                <span>This is id: {props.id}</span><br>
+                <span>This is id: {props.id}</span>
             </div>
         );
     }
