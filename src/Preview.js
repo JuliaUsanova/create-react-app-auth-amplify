@@ -16,12 +16,11 @@ Amplify.configure(aws_exports);
 
 export default class Preview extends Component {
     render() {
-        // let { TopicId } = useParams();
+        let { id } = useParams();
         // let match = useRouteMatch();
         return (
             <div className="">
-                This is simple text
-
+                This is simple text {id}
             </div>
         );
     }
