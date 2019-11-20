@@ -28,7 +28,7 @@ Amplify.configure(aws_exports);
 //     );
 // }
 
-export default function List() {
+export function List() {
         let array = [
             {name: 'alaal', id: 1},
             {name: 'sdfgtg', id: 2},
@@ -50,4 +50,4 @@ export default function List() {
 
         );
 }
-export default withAuthenticator(App, true);
+export default withAuthenticator(List, true);
