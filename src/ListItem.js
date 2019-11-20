@@ -13,7 +13,9 @@ export default class ListItem extends Component {
 
     render() {
         return (
-            <span>This is text: {this.props.name}, This is id: {this.props.id}</span>
+            <div>
+                <span>This is text: {this.props.name}</span>, <span>This is id: {this.props.id}</span>
+            </div>
         );
     }
 }
