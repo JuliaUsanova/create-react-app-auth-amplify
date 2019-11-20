@@ -6,16 +6,10 @@ import Amplify, { Auth } from 'aws-amplify';
 import aws_exports from './aws-exports';
 Amplify.configure(aws_exports);
 
-export default class ListItem extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <div>
-                <span>This is text: {this.props.name}</span>, <span>This is id: {this.props.id}</span>
-            </div>
-        );
-    }
+export function ListItem(props) {
+    return (
+        <div>
+            <span>This is text: {this.props.name}</span>, <span>This is id: {this.props.id}</span>
+        </div>
+    );
 }
