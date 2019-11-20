@@ -26,17 +26,17 @@ export default class List extends Component {
             {name: 'trsrwrf', id: 4},
             {name: 'wfregq', id: 5},
         ];
-        console.log(JSON.stringify(props));
         return (
             <Router>
                 <div className="List">
                     <ul className="List-body">
                         <li className="List-item">
-                            {array.map(c => <Link to={`/${c.id}`}><ListItem name={c.id} id={c.name} /></Link>)}
+                            <Link to="/documents/1"><ListItem name="dlkjsla" id="1" /></Link>
+                            {/*{array.map(c => <Link to={`/documents/${c.id}`}><ListItem name={c.id} id={c.name} /></Link>)}*/}
                         </li>
                     </ul>
                     <Switch>
-                        <Route path="/:id">
+                        <Route path="/documents/:id">
                             <Preview />
                         </Route>
                     </Switch>
