@@ -18,13 +18,22 @@ export default class Preview extends Component {
     id;
     constructor(props) {
         super(props);
-        let { id } = useParams();
-        this.id = id;
+        // let { id } = useParams();
+        // this.id = id;
     }
     componentDidMount() {
         debugger
-        // let { id } = useParams();
-        // this.id = id;
+        let { id } = useParams();
+        this.id = id;
+    }
+    static getDerivedStateFromProps() {
+        debugger
+        let { id } = useParams();
+
+    }
+    componentDidUpdate() {
+        debugger
+        let { id } = useParams();
     }
     render() {
         // let match = useRouteMatch();
