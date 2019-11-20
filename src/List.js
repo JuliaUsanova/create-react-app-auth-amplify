@@ -35,7 +35,7 @@ export default class List extends Component {
                     </ul>
 
                     <Switch>
-                        {array.map(c =>  <Route path="/:id"><Preview /></Route>)}
+                        <Route path="/:id"><Preview /></Route>
                     </Switch>
                 </div>
             </Router>
