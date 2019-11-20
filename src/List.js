@@ -31,9 +31,7 @@ export default class List extends Component {
             <Router>
                 <div className="List">
                     <ul className="List-body">
-                        <li className="List-item">
-                            {array.map(c => <Link to={`/${c.id}`}><ListItem name={c.id} id={c.name} /></Link>)}
-                        </li>
+                        {array.map(c => <li className="List-item"><Link to={`/${c.id}`}><ListItem name={c.id} id={c.name} /></Link></li>)}
                     </ul>
 
                     <Switch>
