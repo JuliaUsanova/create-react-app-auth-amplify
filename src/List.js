@@ -31,12 +31,12 @@ export default class List extends Component {
             <Router>
                 <div className="List">
                     <ul className="List-body">
-                        {array.map(c => <li className="List-item"><ListItem name={c.id} id={c.name} /></li>)}
+                        {array.map(c => <li className="List-item"><Link to={`/${c.id}`}><ListItem name={c.id} id={c.name} /></Link></li>)}
                     </ul>
 
-                    {/*<Switch>*/}
-                        {/*<Route path="/:TopicId"><Preview /></Route>*/}
-                    {/*</Switch>*/}
+                    <Switch>
+                        <Route path="/:TopicId"><Preview /></Route>
+                    </Switch>
                 </div>
             </Router>
         );
