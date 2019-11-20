@@ -10,7 +10,7 @@ Amplify.configure(aws_exports);
 
 
 
-class List extends Component {
+export default class List extends Component {
     render(props) {
         let array = [
             {name: 'alaal', id: 1},
@@ -31,5 +31,3 @@ class List extends Component {
         );
     }
 }
-
-export default withAuthenticator(List, true);

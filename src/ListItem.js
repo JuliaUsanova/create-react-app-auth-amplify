@@ -6,14 +6,13 @@ import Amplify, { Auth } from 'aws-amplify';
 import aws_exports from './aws-exports';
 Amplify.configure(aws_exports);
 
-class ListItem extends Component {
-    render() {
+export default class ListItem extends Component {
+    render(props) {
         return (
             <div className="List-item">
-                smth
+                <span>This is text: {props.name}</span><br>
+                <span>This is id: {props.id}</span><br>
             </div>
         );
     }
 }
-
-export default withAuthenticator(ListItem, true);
