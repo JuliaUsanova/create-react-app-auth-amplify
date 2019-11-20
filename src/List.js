@@ -5,15 +5,17 @@ import { withAuthenticator } from 'aws-amplify-react'
 import Amplify, { Auth } from 'aws-amplify';
 import aws_exports from './aws-exports';
 import ListItem from "./ListItem";
+// import {useParams} from 'react-router';
+import {useParams} from 'react-router-dom';
+
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link,
-    useRouteMatch,
-    useParams
+    useRouteMatch
 } from "react-router-dom";
-import Preview from "./Preview";
+// import Preview from "./Preview";
 Amplify.configure(aws_exports);
 
 //
@@ -28,7 +30,18 @@ Amplify.configure(aws_exports);
 //     );
 // }
 
-export function List() {
+const Preview = (props) => {
+
+    let { id } = useParams();
+
+    return (
+        <div >
+            This is simple text {id}
+        </div>
+    );
+};
+
+export default function List() {
         let array = [
             {name: 'alaal', id: 1},
             {name: 'sdfgtg', id: 2},
@@ -36,18 +49,27 @@ export function List() {
             {name: 'trsrwrf', id: 4},
             {name: 'wfregq', id: 5},
         ];
-        return (
 
+        return (
+            <div>
                 <div className="List">
                     <ul className="List-body">
-                        <li className="List-item">
-                            <Link to={`/${1}`}><ListItem name="dlkjsla" id="1" /></Link>
-                            {/*{array.map(c => <Link to={`/documents/${c.id}`}><ListItem name={c.id} id={c.name} /></Link>)}*/}
-                        </li>
+                        {array.map(c => {
+                            return (
+                                <li className="List-item" key={c.id}>
+                                    <Link to={`/${c.id}`}>
+                                        <ListItem id={c.id}  />
+                                    </Link>
+                                </li>
+                            )
+                        })}
                     </ul>
-                    <Route path={`/:id`}><Preview /></Route>
                 </div>
+                <Switch>
+                    <Route path={`/:id`}><Preview /></Route>
+                </Switch>
+            </div>
 
         );
 }
-export default withAuthenticator(List, true);
+// export default withAuthenticator(List, true);

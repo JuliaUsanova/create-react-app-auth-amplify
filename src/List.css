@@ -3,9 +3,9 @@
 }
 
 .List-body {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
+    /*background-color: #282c34;*/
+    /*min-height: 100vh;*/
+    /*display: flex;*/
     color: white;
 }
 
@@ -14,5 +14,5 @@ li {
 }
 
 a {
-    color: white;
+    /*color: white;*/
 }

@@ -5,25 +5,20 @@ import {withAuthenticator} from 'aws-amplify-react'
 import Amplify, {Auth} from 'aws-amplify';
 import aws_exports from './aws-exports';
 import List from "./List";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useRouteMatch,
-    useParams
-} from "react-router-dom";
+// import {useParams} from 'react-router';
+import {useParams} from 'react-router-dom';
+
+
 
 Amplify.configure(aws_exports);
 
-export default function Preview(props) {
-    debugger
+ const Preview = (props) => {
 
     let { id } = useParams();
 
     return (
-            <div className="">
+            <div>
                 This is simple text {id}
             </div>
         );
-}
+};
