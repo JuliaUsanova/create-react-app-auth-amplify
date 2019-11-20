@@ -16,9 +16,15 @@ Amplify.configure(aws_exports);
 
 export default class Preview extends Component {
     id;
-    componentDidMount() {
+    constructor(props) {
+        super(props);
         let { id } = useParams();
         this.id = id;
+    }
+    componentDidMount() {
+        debugger
+        // let { id } = useParams();
+        // this.id = id;
     }
     render() {
         // let match = useRouteMatch();
