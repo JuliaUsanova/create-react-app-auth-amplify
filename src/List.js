@@ -31,7 +31,9 @@ export default class List extends Component {
 
                 <div className="List">
                     <ul className="List-body">
-                        {array.map(c => <li className="List-item"><ListItem name={c.id} id={c.name} /></li>)}
+                        <li className="List-item">
+                            {array.map(c => <ListItem name={c.id} id={c.name} />)}
+                        </li>
                     </ul>
 
                 </div>
