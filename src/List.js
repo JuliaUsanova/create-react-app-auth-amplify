@@ -11,11 +11,19 @@ import {
     Route,
     Link
 } from "react-router-dom";
-import Preview from "./Preview";
+// import Preview from "./Preview";
 Amplify.configure(aws_exports);
 
 
+function Preview(props) {
+    let { id } = useParams();
 
+    return (
+        <div className="">
+            This is simple text {id}
+        </div>
+    );
+}
 
 export default function List() {
         let array = [
@@ -26,7 +34,7 @@ export default function List() {
             {name: 'wfregq', id: 5},
         ];
         return (
-            <Router>
+
                 <div className="List">
                     <ul className="List-body">
                         <li className="List-item">
@@ -38,6 +46,6 @@ export default function List() {
                         <Route path="/documents/:id" children={<Preview />} />
                     </Switch>
                 </div>
-            </Router>
+
         );
 }
