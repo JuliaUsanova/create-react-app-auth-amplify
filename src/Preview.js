@@ -16,8 +16,9 @@ import {
 
 Amplify.configure(aws_exports);
 
-export default function Preview() {
+export default function Preview(props) {
     debugger
+
     let { id } = useParams();
 
     return (

@@ -14,8 +14,8 @@ import {
 ReactDOM.render(
     <Router>
         <Switch>
-            <Route exact path="/">
-                <App />
+            <Route path="/">
+                <List />
             </Route>
         </Switch>
     </Router>, document.getElementById('root'));

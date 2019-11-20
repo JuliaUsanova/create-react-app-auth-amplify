@@ -8,12 +8,10 @@ import List from "./List";
 import { BrowserRouter } from 'react-router-dom'
 Amplify.configure(aws_exports);
 
-export function App() {
+export default function App() {
     return (
-        <div className="App">
-          <List />
-        </div>
+                <List />
     );
 }
 
-export default withAuthenticator(App, true);
+// export default withAuthenticator(App, true);

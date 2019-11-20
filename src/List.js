@@ -29,7 +29,6 @@ Amplify.configure(aws_exports);
 // }
 
 export default function List() {
-        let { path, url } = useRouteMatch();
         let array = [
             {name: 'alaal', id: 1},
             {name: 'sdfgtg', id: 2},
@@ -42,12 +41,13 @@ export default function List() {
                 <div className="List">
                     <ul className="List-body">
                         <li className="List-item">
-                            <Link to={`${url}/${1}`}><ListItem name="dlkjsla" id="1" /></Link>
+                            <Link to={`/${1}`}><ListItem name="dlkjsla" id="1" /></Link>
                             {/*{array.map(c => <Link to={`/documents/${c.id}`}><ListItem name={c.id} id={c.name} /></Link>)}*/}
                         </li>
                     </ul>
-                    <Route path={`${path}/:id`}><Preview /></Route>
+                    <Route path={`/:id`}><Preview /></Route>
                 </div>
 
         );
 }
+export default withAuthenticator(App, true);
