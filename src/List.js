@@ -17,8 +17,7 @@ Amplify.configure(aws_exports);
 
 
 
-export default class List extends Component {
-    render(props) {
+export default function List() {
         let array = [
             {name: 'alaal', id: 1},
             {name: 'sdfgtg', id: 2},
@@ -41,5 +40,4 @@ export default class List extends Component {
                 </div>
             </Router>
         );
-    }
 }
