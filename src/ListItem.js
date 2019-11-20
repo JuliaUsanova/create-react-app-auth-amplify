@@ -8,7 +8,7 @@ Amplify.configure(aws_exports);
 export default function ListItem(props) {
     return (
         <div>
-            <span>This is text: {this.props.name}</span>, <span>This is id: {props.id}</span>
+            <span>This is text: {props.name}</span>, <span>This is id: {props.id}</span>
         </div>
     );
 }
