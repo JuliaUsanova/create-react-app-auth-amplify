@@ -9,7 +9,8 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
+    Link,
+    useParams
 } from "react-router-dom";
 // import Preview from "./Preview";
 Amplify.configure(aws_exports);
