@@ -8,7 +8,7 @@ import List from "./List";
 import { BrowserRouter } from 'react-router-dom'
 Amplify.configure(aws_exports);
 
-export default function App() {
+export function App() {
     return (
         <div className="App">
           <List />
