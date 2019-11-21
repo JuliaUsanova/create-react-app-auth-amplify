@@ -52,12 +52,11 @@ export default function List() {
     //     {name: 'wfregq', id: 5},
     // ];
 
-    const state = useState(initialUserState);
-    debugger
-    const list = state[0].list;
-    const setList = state[1];
-    // const [list, setList] = useState(initialUserState);
-    // const [loading, setLoading] = useState(initialUserState);
+    // const state = React.useState(initialUserState);
+    // debugger
+    // const list = state[0].list;
+    // const setList = state[1];
+    const [list, setList] = React.useState(initialUserState);
 
     useEffect(() => {
 
