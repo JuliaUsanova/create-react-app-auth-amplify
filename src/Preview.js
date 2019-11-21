@@ -11,7 +11,7 @@ const Preview = (props) => {
     let { id } = useParams();
 
     return (
-        <div >
+        <div className="Doc-preview">
             This is simple text {id}
         </div>
     );

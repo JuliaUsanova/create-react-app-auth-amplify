@@ -8,7 +8,9 @@
     /*display: flex;*/
     color: white;
 }
-
+ul {
+    padding: 0 20px;
+}
 li {
     display: block;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './ListItem.css';
 import Amplify from 'aws-amplify';
 import aws_exports from './aws-exports';
 
@@ -7,8 +7,10 @@ Amplify.configure(aws_exports);
 
 export default function ListItem(props) {
     return (
-        <div>
-            <span>This is id: {props.id}, this is name: {props.name}, this is url: {props.url}</span>
+        <div className="List-item-content">
+            <span className="bold">Document Id: {props.id}</span>
+            <span className="bold">User Id: {props.userId}</span>
+            <a href={props.url}>{props.name}</a>
         </div>
 
     );

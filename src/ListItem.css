@@ -1,0 +1,13 @@
+.List-item-content {
+    display: flex;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.List-item-content > span {
+    width: 33%;
+    max-width: 33%;
+    min-width: 33%;
+}

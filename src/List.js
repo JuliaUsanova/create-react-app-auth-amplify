@@ -45,32 +45,14 @@ export default function List() {
         list: [],
         loading: true,
     };
-    // let array = [
-    //     {name: 'alaal', id: 1},
-    //     {name: 'sdfgtg', id: 2},
-    //     {name: 'ytrdfs', id: 3},
-    //     {name: 'trsrwrf', id: 4},
-    //     {name: 'wfregq', id: 5},
-    // ];
-
-    // const state = React.useState(initialUserState);
-    // debugger
-    // const list = state[0].list;
-    // const setList = state[1];
     const [list, setList] = React.useState(initialUserState);
 
     React.useEffect(() => {
-
         const getList = async () => {
             let data = await getData();
-            debugger
             setList({list: data ? data.userDocs : mock.userDocs, loading: false});
         };
         getList();
-        debugger
-        // console.log(list)
-        // Invoke the async function
-        // getUser()
     }, []);
     console.log(list.loading);
     return list.loading ? (
@@ -83,7 +65,7 @@ export default function List() {
                             return (
                                 <li className="List-item" key={listItem.documentId}>
                                     <Link to={`/${listItem.documentId}`}>
-                                        <ListItem id={listItem.documentId}  name={listItem.documentName} url={listItem.documentUrl}/>
+                                        <ListItem id={listItem.documentId}  name={listItem.documentName} url={listItem.documentUrl} userId={listItem.userId}/>
                                     </Link>
                                 </li>
                             )
