@@ -51,7 +51,11 @@ export default function List() {
     //     {name: 'trsrwrf', id: 4},
     //     {name: 'wfregq', id: 5},
     // ];
-    const [list, setList] = useState(initialUserState);
+
+    const state = useState(initialUserState);
+    const list = state.list;
+    const setList = state.setList;
+    // const [list, setList] = useState(initialUserState);
     // const [loading, setLoading] = useState(initialUserState);
 
     useEffect(() => {
