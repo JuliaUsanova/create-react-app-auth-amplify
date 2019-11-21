@@ -13,6 +13,7 @@ const Preview = (props) => {
     return (
         <div className="Doc-preview">
             <div>{props.documentText}</div>
+            <h4>Skills</h4>
             <ul>
                 {props.documentSkills.map((skill) => <li>{skill}</li>)}
             </ul>

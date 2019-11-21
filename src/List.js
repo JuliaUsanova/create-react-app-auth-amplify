@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './List.css';
+import { withAuthenticator } from 'aws-amplify-react'
 import Amplify from 'aws-amplify';
 import aws_exports from './aws-exports';
 import ListItem from "./ListItem";
@@ -13,7 +14,7 @@ function getData() {
     return axios.get(`https://neos5iulbh.execute-api.us-east-1.amazonaws.com/prod/get-all-documents`);
 }
 
-export default function List() {
+export function List() {
     const initialUserState = {
         list: [],
         loading: ''
@@ -72,4 +73,4 @@ export default function List() {
 
         );
 }
-// export default withAuthenticator(List, true);
+export default withAuthenticator(List, true);
