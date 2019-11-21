@@ -53,8 +53,9 @@ export default function List() {
     // ];
 
     const state = useState(initialUserState);
-    const list = state.list;
-    const setList = state.setList;
+    debugger
+    const list = state[0].list;
+    const setList = state[1];
     // const [list, setList] = useState(initialUserState);
     // const [loading, setLoading] = useState(initialUserState);
 
@@ -78,7 +79,7 @@ export default function List() {
             <div>
                 <div className="List">
                     <ul className="List-body">
-                        {list.map(listItem => {
+                        {list.list.map(listItem => {
                             return (
                                 <li className="List-item" key={listItem.documentId}>
                                     <Link to={`/${listItem.documentId}`}>
