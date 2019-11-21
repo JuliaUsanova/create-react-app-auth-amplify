@@ -50,6 +50,7 @@ export default function List() {
     React.useEffect(() => {
         const getList = async () => {
             let data = await getData();
+            // setList({list: mock.userDocs, loading: false});
             setList({list: data ? data.userDocs : mock.userDocs, loading: false});
         };
         getList();

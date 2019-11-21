@@ -15,7 +15,7 @@ li {
     display: block;
 }
 
-a {
+.link {
     /*color: white;*/
 }
 
@@ -33,7 +33,7 @@ a {
     color: #282c34;
 }
 
-.List-item a:hover {
+.List-item .link:hover {
     text-decoration: underline;
     color: coral;
 }
