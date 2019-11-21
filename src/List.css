@@ -16,3 +16,22 @@ li {
 a {
     /*color: white;*/
 }
+
+.List-item {
+    max-width: 100%;
+    text-align: left;
+    line-height: 20px;
+    margin-bottom: 15px;
+    color: black;
+    text-decoration: none;
+}
+
+.List-item a {
+    text-decoration: none;
+    color: #282c34;
+}
+
+.List-item a:hover {
+    text-decoration: underline;
+    color: coral;
+}
