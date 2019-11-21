@@ -37,7 +37,7 @@ const mock = {
 };
 
 function getData() {
-    return axios.get(`https://neos5iulbh.execute-api.us-east-1.amazonaws.com/prod/get-all-documents`).catch((err) => console.error(err));
+    return axios.get(`https://neos5iulbh.execute-api.us-east-1.amazonaws.com/prod/get-all-documents`);
 }
 
 export default function List() {
