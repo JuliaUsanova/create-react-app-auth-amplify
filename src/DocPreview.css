@@ -3,3 +3,6 @@
     border: 1px solid coral;
     padding: 15px;
 }
+.Doc-preview > div {
+    margin-bottom: 40px;
+}

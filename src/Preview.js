@@ -9,10 +9,13 @@ Amplify.configure(aws_exports);
 
 const Preview = (props) => {
     let { id } = useParams();
-
+    debugger
     return (
         <div className="Doc-preview">
-            This is simple text {id}
+            <div>{props.documentText}</div>
+            <ul>
+                {props.documentSkills.map((skill) => <li>{skill}</li>)}
+            </ul>
         </div>
     );
 };
